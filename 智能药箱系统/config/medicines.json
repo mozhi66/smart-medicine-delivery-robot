@@ -1,0 +1,86 @@
+{
+  "_comment": "药品知识库。code 必须与药瓶上的二维码内容完全一致；slot 从 1 开始；high_risk=true 的药品取用前会语音二次确认。",
+  "medicines": [
+    {
+      "code": "MED001",
+      "name": "感冒灵颗粒",
+      "category": "感冒药",
+      "slot": 1,
+      "high_risk": false,
+      "stock": 12,
+      "note": "开水冲服，一次一袋，一日三次"
+    },
+    {
+      "code": "MED002",
+      "name": "对乙酰氨基酚片",
+      "category": "退烧药",
+      "slot": 2,
+      "high_risk": true,
+      "stock": 8,
+      "note": "体温超过38.5度服用，间隔至少4小时，24小时不超过4次"
+    },
+    {
+      "code": "MED003",
+      "name": "复方甘草片",
+      "category": "止咳药",
+      "slot": 3,
+      "high_risk": true,
+      "stock": 6,
+      "note": "含服或吞服，一次2片，不宜长期服用"
+    },
+    {
+      "code": "MED004",
+      "name": "布洛芬缓释胶囊",
+      "category": "止痛药",
+      "slot": 4,
+      "high_risk": true,
+      "stock": 10,
+      "note": "饭后服用，一次一粒，一日两次"
+    },
+    {
+      "code": "MED005",
+      "name": "蒙脱石散",
+      "category": "肠胃药",
+      "slot": 5,
+      "high_risk": false,
+      "stock": 9,
+      "note": "溶于温水口服，一次一袋"
+    },
+    {
+      "code": "MED006",
+      "name": "阿莫西林胶囊",
+      "category": "消炎药",
+      "slot": 6,
+      "high_risk": true,
+      "stock": 5,
+      "note": "处方药，青霉素过敏者禁用，须遵医嘱"
+    },
+    {
+      "code": "MED007",
+      "name": "氯雷他定片",
+      "category": "抗过敏药",
+      "slot": 7,
+      "high_risk": false,
+      "stock": 7,
+      "note": "一日一次，一次一片，可能引起嗜睡"
+    },
+    {
+      "code": "MED008",
+      "name": "碘伏棉签",
+      "category": "外用消毒",
+      "slot": 8,
+      "high_risk": false,
+      "stock": 20,
+      "note": "外用，仅限皮肤消毒，不可内服"
+    },
+    {
+      "code": "MED009",
+      "name": "创可贴",
+      "category": "外用消毒",
+      "slot": 9,
+      "high_risk": false,
+      "stock": 30,
+      "note": "清洁伤口后贴敷，定期更换"
+    }
+  ]
+}

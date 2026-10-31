@@ -1,0 +1,29 @@
+# 智能药箱系统 · PC 端依赖（Python 3.10）
+#
+# 依据全部 PC 代码的 import 语句整理，版本号于 2026-10-20 核对。
+# 安装：python -m pip install -r requirements.txt
+#
+# ---- 核心依赖（主流程 pc/main.py 必须）----
+numpy==2.2.6                # 数组/数值（ASR/视觉/运动学）
+opencv-python==5.0.0.93     # cv2：摄像头、二维码识别、GUI 窗口（需含 QRCodeEncoder）
+PyYAML==6.0.3               # config/app.yaml 等 YAML 配置
+requests==2.34.2            # 智谱 GLM-4-Flash API 调用（OpenAI 兼容协议）
+pyserial==3.5               # STM32 串口通信（$SA/$SS/$GC/$MV 等协议帧）
+Pillow==12.3.0              # PIL：二维码标签中文渲染、gui.py 中文文字
+sounddevice==0.5.6          # 麦克风采集（FunASR 前端）
+funasr==1.4.15              # ASR：paraformer-zh + fsmn-vad + ct-punc
+torch==2.9.1+cpu            # funasr 的推理后端（CPU 版即可）
+modelscope==1.40.0          # funasr 模型下载/缓存管理
+pyttsx3==2.99               # TTS 本地方言（SAPI5），edge-tts 不可用时的回退
+#
+# ---- 可选依赖（特定工具/功能需要，缺失时自动降级）----
+# edge-tts                 # 在线 TTS（音质更好）；未安装时 tts.py 自动回退 pyttsx3
+# matplotlib               # tools/kinematics_check.py 画工作空间/弧线图
+# python-docx              # tools/make_med_table_docx.py 生成药品-症状对照表
+#
+# ---- 备注 ----
+# 1) opencv-python 必须是含 QRCodeEncoder 的版本（4.7+ / 本机 5.0），
+#    否则 pc/vision/qr_detector.py 的 make_qr_image() 会返回 None。
+# 2) FunASR 首次运行会从 ModelScope 下载模型到 ~/.cache/modelscope，
+#    需要联网；离线使用前先跑通一次。
+# 3) 舵机/底盘的真机联调还需要 STM32 固件（0stm/，Keil SPL 工程）。

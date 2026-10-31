@@ -1,0 +1,69 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ---------- 密钥与本地配置 ----------
+# 千万不要把填了真实 api_key 的配置提交上来
+.env
+.env.*
+*.local.yaml
+config/app.local.yaml
+config/secrets.*
+
+# ---------- 运行期产物 ----------
+logs/
+*.log
+output/
+0qrc/
+runtime/
+*.pid
+
+# ---------- Keil / MDK 编译产物 ----------
+Objects/
+Listings/
+DebugConfig/
+*.uvguix.*
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.lst
+*.map
+*.lnp
+*.dep
+*.bak
+*.bak[0-9]*
+*.uvguix
+
+# ---------- 字体与第三方二进制（版权 / 体积） ----------
+*.ttf
+*.TTF
+*.otf
+*.OTF
+*.bdf
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ---------- IDE ----------
+.idea/
+.vscode/
+*.iml
+.mimocode/
+.workbuddy/
+
+# ---------- 系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
